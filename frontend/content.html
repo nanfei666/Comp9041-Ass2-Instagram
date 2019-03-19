@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+  <!-- Mobile Specific Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="img/fav.png">
+  <!-- Author Meta -->
+  <meta name="author" content="colorlib">
+  <!-- Meta Description -->
+  <meta name="description" content="">
+  <!-- Meta Keyword -->
+  <meta name="keywords" content="">
+  <!-- meta character set -->
+  <meta charset="UTF-8">
+  <!-- Site Title -->
+  <title>Instacram</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="styles/linearicons.css">
+    <link rel="stylesheet" href="styles/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/owl.carousel.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/text.css">
+    <link rel="stylesheet" href="styles/comment_box.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- Start Header Area -->
+    <header class="default-header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="http://127.0.0.1:8080/mainpage">
+            <b>Instacram</b>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
+              <ul class="navbar-nav" id="navigation">
+              <li><a href="http://127.0.0.1:8080/mainpage">Home</a></li>
+              <li id="depends"></li>
+              <li id="new_content"></li>
+              <li id="log_out"></li>
+
+
+
+
+
+
+              </ul>
+            </div>
+        </div>
+      </nav>
+    </header>
+    <!-- End Header Area -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New post</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+            <form>
+              <div class="form-group">
+              <label for="new_content_description">Description</label>
+              <input class="form-control" id="new_content_description" placeholder="Share your life">
+
+              </div>
+
+              <div class="form-group">
+              <label for="new_content_img">Choose Image</label>
+              <input type="file" onchange="selectImg(this);" class="form-control-file" id="new_content_img">
+              <img id="showImg" src=""/>
+            </div>
+          </form>
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="submit_new_content" onclick="Submit()" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- profile area -->
+
+    <div class="modal fade" id="profile_Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <!-- <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">User Profile</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+            <form>
+              <div class="form-group">
+              <label for="new_content_description">Description</label>
+              <input class="form-control" id="new_content_description" placeholder="Share your life">
+
+              </div>
+
+              <div class="form-group">
+              <label for="new_content_img">Choose Image</label>
+              <input type="file" onchange="selectImg(this);" class="form-control-file" id="new_content_img">
+              <img id="showImg" src=""/>
+            </div>
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" id="submit_new_content" onclick="Submit()" class="btn btn-primary">Post</button>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <!-- start banner Area -->
+    <!-- start banner Area -->
+    <section class="banner-area relative" id="home" data-parallax="scroll" data-image-src="img/header-bg.jpg">
+      <div class="overlay-bg overlay"></div>
+      <div class="container">
+        <div class="row fullscreen">
+          <div class="banner-content d-flex align-items-center col-lg-12 col-md-12">
+            <h1>
+              A Discount Toner Cartridge <br>
+              Is Better Than Ever.
+            </h1>
+          </div>
+          <div class="head-bottom-meta d-flex justify-content-between align-items-end col-lg-12">
+            <div class="col-lg-6 flex-row d-flex meta-left no-padding">
+              <p><span class="lnr lnr-heart"></span> 15 Likes</p>
+              <p><span class="lnr lnr-bubble"></span> 02 Comments</p>
+            </div>
+            <div class="col-lg-6 flex-row d-flex meta-right no-padding justify-content-end" id="main_page_user_infor">
+              <!-- <div class="user-meta">
+                <h4 class="text-white">Mark wiens</h4>
+                <p>12 Dec, 2017 11:21 am</p>
+              </div> -->
+              <!-- <img class="img-fluid user-img" src="img/user.jpg" alt=""> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End banner Area -->
+    <!-- End banner Area -->
+
+
+    <!-- Start category Area -->
+
+    <!-- End category Area -->
+
+    <!-- Start travel Area -->
+
+    <!-- End travel Area -->
+
+    <!-- Start fashion Area -->
+    <div class="fashion-area section-gap" id="fashion">
+      <div class="container">
+        <!-- Start about Area -->
+        <section class="about-area pt-100 pb-100">
+          <div class="container" id="feed_container">
+            <!-- <div class="row align-items-center justify-content-between">
+
+              <div class="col-lg-6 col-md-12 col-sm-12 about-left">
+                  <img class="img-fluid" src="img/about.jpg" alt="">
+              </div>
+              <div class="col-lg-6 col-md-12 col-sm-12 about-right">
+                <span class="lnr lnr-sun"></span>
+                <h1 class="text-uppercase">
+
+                  <span>Visually</span> <br>
+                  clean & Perfect
+                </h1>
+                <p>
+                  Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola Here, I focus on a range of items and features that we use in life without giving them a second thought such as Coca Cola.
+                </p>
+                <a class="learn-btn text-uppercase" href="#">Learn Details</a>
+              </div>
+
+            </div> -->
+          </div>
+        </section>
+
+
+        <div class="container" id="comment_container">
+            <div class="row" id = "commment_row">
+                <!-- <div>
+                    <div class="panel panel-white post panel-shadow">
+                        <div class="post-heading">
+                            <div class="pull-left image">
+                                <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                            </div>
+                            <div class="pull-left meta">
+                                <div class="title h5">
+                                    <a href="#"><b>Ryan Haywood</b></a>
+                                    made a post.
+                                </div>
+                                <h6 class="text-muted time">1 minute ago</h6>
+                            </div>
+                        </div>
+                        <div class="post-description">
+                            <p>Bootdey is a gallery of free snippets resources templates and utilities for bootstrap css hmtl js framework. Codes for developers and web designers</p>
+
+                        </div>
+                    </div>
+                </div> -->
+
+
+            </div>
+        </div>
+
+        <!-- start of comment section -->
+        <div class="container">
+
+            <div class="row">
+
+            <div style=" width: 100%;">
+            						<div class="widget-area no-padding blank">
+        								<div class="status-upload">
+        									<form>
+        										<textarea id="comment_text" placeholder="What are you doing right now?" ></textarea>
+
+        										<button id="submit_btn" onclick="btn_onClick()" type="submit" class="btn btn-success green">Share</button>
+        									</form>
+        								</div><!-- Status Upload  -->
+        							</div><!-- Widget Area -->
+        						</div>
+
+            </div>
+        </div>
+
+        <!-- end of comment section -->
+
+
+
+          </div>
+
+
+
+        <!-- <a href="#" class="primary-btn load-more pbtn-2 text-uppercase mx-auto mt-60">Load More </a> -->
+
+      </div>
+
+
+    <!-- End fashion Area -->
+
+
+
+    <!-- start footer Area -->
+
+    <!-- End footer Area -->
+
+    <script src="src/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="src/js/vendor/bootstrap.min.js"></script>
+    <script src="src/js/jquery.ajaxchimp.min.js"></script>
+    <script src="src/js/parallax.min.js"></script>
+    <script src="src/js/owl.carousel.min.js"></script>
+    <script src="src/js/jquery.magnific-popup.min.js"></script>
+    <script src="src/js/jquery.sticky.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/content.js"></script>
+    <script src="src/submit_comments.js"></script>
+    <script src="src/show_nav.js"></script>
+
+  </body>
+</html>
